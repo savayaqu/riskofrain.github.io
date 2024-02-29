@@ -1,0 +1,262 @@
+@media   (max-width: 378px) {
+
+    header > div {
+        padding: 0;
+    }
+    header > div > h2 {
+        font-size: 35px;
+    }
+    header > div > p {
+        font-size: 25px;
+    }
+}
+@media   (max-width: 475px) {
+
+    header > nav > div:nth-child(2)  {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 10px;
+    }
+    header > nav > div:nth-child(2) > a {
+        font-size: 30px;
+    }
+    header > nav > div:nth-child(3) > form > button {
+        font-size: 20px;
+    }
+}
+
+@media   (max-width: 1600px) {
+
+    header, .benefit, .we-can, .working, .about-company, .call-back, .adress, footer {
+
+        max-width: 100%;
+    }
+    .logo {
+        display: none;
+    }
+    header > nav {
+        justify-content: flex-start;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    header > nav > div:nth-child(2) {
+        flex-wrap: wrap;
+    }
+    header > div {
+        padding: 0;
+    }
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+    }
+    .benefit > div:nth-child(1) > h1 {
+        padding: 0;
+    }
+    .benefit > div:nth-child(2) > h1 {
+        padding: 0;
+    }
+    .benefit > div:nth-child(1) {
+        padding: 0;
+        border: none;
+        height: 100%;
+        width: 100%;
+    }
+    .benefit > div:nth-child(1) > div {
+        border-right: none;
+    }
+    .benefit > div:nth-child(1) > div:nth-child(5) {
+        border-right: none;
+        border-bottom: 3px solid #1B996B;
+    }
+    .benefit > div:nth-child(2) {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .benefit > div:nth-child(1) > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+    .benefit > div:nth-child(2) > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+    .benefit > div > div {
+        width: 100%;
+    }
+    .we-can {
+        height: 100%;
+    }
+    .we-can > div {
+    display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap:10px;
+    }
+    .we-can > img {
+        display: none;
+    }
+    .we-can > div > div:nth-child(1) {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .we-can > div > div:nth-child(2) {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .we-can > div > div:nth-child(3) {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .working {
+        height: 100%;
+        background: none;
+    }
+    .working > div:nth-child(2) {
+        padding: 0 0 50px 0;
+        text-align: center;
+    }
+    .more {
+        padding: 0;
+    }
+    .more > div {
+        padding-bottom: 10px;
+    }
+    .more::after {
+        display: none;
+    }
+    .more > div:nth-child(6) {
+        padding-top: 150px;
+    }
+    .more > div:nth-child(6)::after {
+        top: 100px;
+    }
+    .about-company {
+        width: 100%;
+        height: 100%;
+    }
+    .about-company > h1 {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .about-company > div {
+        grid-template-columns: 100%;
+        grid-template-rows: 80px 150px 120px 150px 120px 120px;
+        padding: 0;
+    }
+    .about-company > div > img {
+        display: none;
+    }
+    .about-company > div > span {
+        font-size: 20px;
+    }
+    .about-company > div > p {
+        font-size: 13px;
+    }
+    .more > div:nth-child(1)::after {
+        content: "1";
+    }
+    .more > div:nth-child(2)::after {
+        content: "2";
+    }
+    .more > div:nth-child(3)::after {
+        content: "3";
+    }
+    .more > div:nth-child(4)::after {
+        content: "4";
+    }
+    .more > div:nth-child(5)::after {
+        content: "5";
+    }
+    .more > div:nth-child(6)::after {
+        content: "6";
+    }
+    .call-back {
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .call-back > form {
+        display: flex;
+        justify-content: flex-start;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    .call-back > form > label > span {
+        display: none;
+    }
+    .adress {
+        display: flex;
+        justify-content: flex-start;
+        background: url("../images/adress/Rectangle 7.png") no-repeat;
+    }
+    .adress > img {
+        display: none;
+    }
+    .info {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer > nav > div:nth-child(1) {
+        padding: 0;
+    }
+    footer {
+        padding: 0;
+    }
+    footer > div {
+        background: #F6F5F5;
+        padding-top: 20px;
+    }
+    .logo-footer {
+         padding: 0;
+         display: none;
+     }
+    footer > nav {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        background: #F6F5F5;
+    }
+    footer > nav > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap:10px;
+        padding: 0;
+    }
+    .images > span {
+        padding: 0;
+        margin: 0;
+    }
+    .images {
+        padding: 0;
+        justify-content: flex-start;
+        background: #F6F5F5;
+        width: 100%;
+    }
+}

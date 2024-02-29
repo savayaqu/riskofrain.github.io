@@ -1,0 +1,22 @@
+#main-image {
+    position: relative;
+    top: -300px;
+    opacity: 0.1;
+}
+.anim {
+    position: relative;
+    top: 150px;
+    opacity: 0;
+}
+
+.active {
+    transform: translateY(-150px);
+    transition: all 0.7s;
+    opacity: 1;
+}
+.fade-in {
+    transform: translateY(300px);
+    transition: all 2.5s ease;
+    opacity:  1 ;
+}
+

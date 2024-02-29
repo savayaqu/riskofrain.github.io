@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acrid</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/character-style.css">
+    <link rel="stylesheet" href="../assets/css/engine.css">
+
+</head>
+<body>
+<!-- Блок с навигацией -->
+<div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="https://gearboxsoftware.zendesk.com/hc/en-us/categories/360001615171-Risk-of-Rain-2">Support</a></li>
+            <li><a href="../Characters.html">Characters</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- Дополнительная информация о персонаже -->
+<section class="information_character">
+    <div class="center-block">
+        <div class="page-one-character">
+            <div class="preview-character">
+                <img src="../assets/images/Characters/Acrid/Acrid.png" alt="Acrid">
+                <div>
+                    <h2 style="text-shadow: 1px 1px 2px black;">Acrid</h2>
+                    <p style="color: #898989; text-shadow: 1px 1px 2px black;">Survivor</p>
+                </div>
+            </div>
+
+            <div class="character-stats">
+                <div>
+                    <div class="tableaa">
+                        <div>
+                            <p>Health</p>
+                            <p>160 (+48 per level) </p>
+                        </div>
+                        <div>
+                            <div>Health Regen</div>
+                            <div>
+                                <div>
+                                    <img src="../assets/images/Pain/Drizzle.png" alt="Drizzle">
+                                    <span style="color: #9CE562;">3.75/s (+0.5 per level)</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/Pain/Rainstorm.png" alt="Rainstorm">
+                                    <span style="color: #E5C962;">2.5/s (+0.5 per level)</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/Pain/Monsoon.png" alt="Monsoon">
+                                    <span style="color: #E58262;">1.5/s (+0.5 per level)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Damage</p>
+                            <p>15 (+3 per level) </p>
+                        </div>
+                        <div>
+                            <p>Speed</p>
+                            <p>7 m/s</p>
+                        </div>
+                        <div>
+                            <p>Armor</p>
+                            <p>20 (<img src="../assets/images/Pain/Drizzle.png" alt="Drizzle"> <span style="color: #9CE562;">90</span>)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-lore">
+                    <h3 style="text-align: start;">Lore:</h3>
+                    <p>Theoretically, the true contents of the cell were just a mess of atoms. The structure of the contents in each cell – living, weapon, whatever - was categorized, sequenced, and then turned to juice and cured into solid gems. An incredibly efficient and lossless format.</p>
+                    <p>And yet when the cell containment broke – and emergency protocols re-sequenced that mess of atoms back into the creature known as Acrid – he already knew. Maybe he was somehow conscious, in his juice-gem state. Maybe they injected him with information. Maybe he was connected to their psionic network. Maybe he just made it up.</p>
+                    <p>But he knew – that the strange crustaceans that scrambled his atoms and imprisoned him here, in a place unknown – were panicking. Something had gone wrong, in a world where variables were not allowed.</p>
+                    <p>Something was <em>leaking</em>.</p>
+                    <p>They may have finally imprisoned something that could not be contained.</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-two-character">
+            <div class="page-two-character-video">
+                <div>
+                    <img alt="Acrid" src="../assets/images/Characters/Acrid/Acrid.jpg" class="video-character">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="abilities" id="abilities">
+    <div class="abilities_header">
+        <h2>Abilities</h2>
+    </div>
+    <div class="abilities_heroAbilities">
+        <div class="abilities_left">
+            <!-- Видео способностей персонажа -->
+            <div class="abilities_video">
+                <video
+                        v-for="(video, index) in videos"
+                        :key="index"
+                        :id="'video-' + index"
+                        :src="video.src"
+                        class="abilities_video_play"
+                        muted
+                        loop
+                        :style="{ display: selectedIndex === index ? 'block' : 'none' }"
+                ></video>
+            </div>
+            <!-- Кнопки с картинкой -->
+            <div class="abilities_selector" >
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===0 || index===1" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="one_ability">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index === 2" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===3 || index===4" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===5 || index===6" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="one_ability">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===7" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+            </div>
+        </div>
+        <!-- Описание способностей персонажа -->
+        <div class="abilities_right">
+            <div
+                    v-for="(ability, index) in abilities"
+                    :key="index"
+                    class="right-ability"
+                    :class="{
+            'display-selected': selectedIndex === index,
+            'display-non-selected': selectedIndex !== index
+          }"
+            >
+                <div class="ability-up">
+                    <img :src="`${ability.image}`" :alt="ability.name" />
+                    <div>
+                        <h3>{{ ability.name }}</h3>
+                        <p>{{ ability.description }}</p>
+                    </div>
+                </div>
+                <div class="ability-down">
+                    <p v-if="ability.cooldown">Cooldown: {{ ability.cooldown }}</p>
+                    <p v-if="ability.procCoefficient">Proc Coefficient: {{ ability.procCoefficient }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+<script src="../assets/js/character.js"></script>
+</body>
+</html>

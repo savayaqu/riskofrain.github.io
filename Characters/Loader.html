@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loader</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/character-style.css">
+    <link rel="stylesheet" href="../assets/css/engine.css">
+
+</head>
+<body>
+<!-- Блок с навигацией -->
+<div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="https://gearboxsoftware.zendesk.com/hc/en-us/categories/360001615171-Risk-of-Rain-2">Support</a></li>
+            <li><a href="../Characters.html">Characters</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- Дополнительная информация о персонаже -->
+<section class="information_character">
+    <div class="center-block">
+        <div class="page-one-character">
+            <div class="preview-character">
+                <img src="../assets/images/Characters/Loader/Loader.webp" alt="Loader">
+                <div>
+                    <h2 style="text-shadow: 1px 1px 2px black;">Loader</h2>
+                    <p style="color: #898989; text-shadow: 1px 1px 2px black;">Survivor</p>
+                </div>
+            </div>
+
+            <div class="character-stats">
+                <div>
+                    <div class="tableaa">
+                        <div>
+                            <p>Health</p>
+                            <p>160 (+48 per level) </p>
+                        </div>
+                        <div>
+                            <div>Health Regen</div>
+                            <div>
+                                <div>
+                                    <img src="../assets/images/Pain/Drizzle.png" alt="Drizzle">
+                                    <span style="color: #9CE562;">3.75/s (+0.5 per level)</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/Pain/Rainstorm.png" alt="Rainstorm">
+                                    <span style="color: #E5C962;">2.5/s (+0.5 per level)</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/Pain/Monsoon.png" alt="Monsoon">
+                                    <span style="color: #E58262;">1.5/s (+0.5 per level)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Damage</p>
+                            <p>12 (+2.4 per level) </p>
+                        </div>
+                        <div>
+                            <p>Speed</p>
+                            <p>7 m/s</p>
+                        </div>
+                        <div>
+                            <p>Armor</p>
+                            <p>20 (<img src="../assets/images/Pain/Drizzle.png" alt="Drizzle"> <span style="color: #9CE562;">90</span>)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-lore">
+                    <h3 style="text-align: start;">Lore:</h3>
+                    <p>A lot of people would say that loading cargo is a dull job. The Loader could not disagree more.</p>
+                    <p>Other jobs don’t supply their employees with a fully articulate titanium exoskeleton capable of lifting 250 tons.</p>
+                    <p>Other jobs don’t allow their employees to meet the crews of countless starships from across the galaxy.</p>
+                    <p>Other jobs don’t let you use your exoskeleton for your own entertainment, much less outfit it with custom-built grappling hooks powered by a winch capable of hauling up to 100 tons.</p>
+                    <p>Other jobs don’t involve being approached by a legend among the UES work force, and asked to embark on a classified mission to the Uncharted Territories.</p>
+                    <p>Other jobs don’t involve fighting exotic and strange alien creatures, and exploring mystical ruins on another planet.</p>
+                    <p>A lot of people would say that loading cargo is a dull job. The Loader could not disagree more.</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-two-character">
+            <div class="page-two-character-video">
+                <div>
+                    <img alt="Loader" src="../assets/images/Characters/Loader/Loader.jpg" class="video-character">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="abilities" id="abilities">
+    <div class="abilities_header">
+        <h2>Abilities</h2>
+    </div>
+    <div class="abilities_heroAbilities">
+        <div class="abilities_left">
+            <!-- Видео способностей персонажа -->
+            <div class="abilities_video">
+                <video
+                        v-for="(video, index) in videos"
+                        :key="index"
+                        :id="'video-' + index"
+                        :src="video.src"
+                        class="abilities_video_play"
+                        muted
+                        loop
+                        :style="{ display: selectedIndex === index ? 'block' : 'none' }"
+                ></video>
+            </div>
+            <!-- Кнопки с картинкой -->
+            <div class="abilities_selector" >
+                <div class="one_ability">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index === 0" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="one_ability">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index === 1" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===2 || index===3" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===4 || index===5" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===6 || index===7" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+            </div>
+        </div>
+        <!-- Описание способностей персонажа -->
+        <div class="abilities_right">
+            <div
+                    v-for="(ability, index) in abilities"
+                    :key="index"
+                    class="right-ability"
+                    :class="{
+            'display-selected': selectedIndex === index,
+            'display-non-selected': selectedIndex !== index
+          }"
+            >
+                <div class="ability-up">
+                    <img :src="`${ability.image}`" :alt="ability.name" />
+                    <div>
+                        <h3>{{ ability.name }}</h3>
+                        <p>{{ ability.description }}</p>
+                    </div>
+                </div>
+                <div class="ability-down">
+                    <p v-if="ability.cooldown">Cooldown: {{ ability.cooldown }}</p>
+                    <p v-if="ability.procCoefficient">Proc Coefficient: {{ ability.procCoefficient }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+<script src="../assets/js/character.js"></script>
+</body>
+</html>

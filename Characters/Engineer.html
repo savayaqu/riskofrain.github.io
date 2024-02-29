@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Engineer</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/character-style.css">
+    <link rel="stylesheet" href="../assets/css/engine.css">
+
+</head>
+<body>
+<!-- Блок с навигацией -->
+<div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="https://gearboxsoftware.zendesk.com/hc/en-us/categories/360001615171-Risk-of-Rain-2">Support</a></li>
+            <li><a href="../Characters.html">Characters</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- Дополнительная информация о персонаже -->
+<section class="information_character">
+    <div class="center-block">
+        <div class="page-one-character">
+            <div class="preview-character">
+                <img src="../assets/images/Characters/Engineer/Engineer.webp" alt="Engineer">
+                <div>
+                    <h2 style="text-shadow: 1px 1px 2px black;">Engineer</h2>
+                    <p style="color: #898989; text-shadow: 1px 1px 2px black;">Survivor</p>
+                </div>
+            </div>
+
+            <div class="character-stats">
+                <div>
+                    <div class="tableaa">
+                        <div>
+                            <p>Health</p>
+                            <p>130 (+39 per level) </p>
+                        </div>
+                        <div>
+                            <div>Health Regen</div>
+                            <div>
+                                <div>
+                                    <img src="../assets/images/Pain/Drizzle.png" alt="Drizzle">
+                                    <span style="color: #9CE562;">1.5/s (+0.2 per level)</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/Pain/Rainstorm.png" alt="Rainstorm">
+                                    <span style="color: #E5C962;">1/s (+0.2 per level)</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/Pain/Monsoon.png" alt="Monsoon">
+                                    <span style="color: #E58262;">0.6/s (+0.2 per level)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Damage</p>
+                            <p>14 (+2.8 per level) </p>
+                        </div>
+                        <div>
+                            <p>Speed</p>
+                            <p>7 m/s</p>
+                        </div>
+                        <div>
+                            <p>Armor</p>
+                            <p>0 (<img src="../assets/images/Pain/Drizzle.png" alt="Drizzle"> <span style="color: #9CE562;">70</span>)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-lore">
+                    <h3 style="text-align: start;">Lore:</h3>
+                    <p>“The future is now! Cybernetic enhancements – buy them cheap and become the person you’ve always dreamed of being!”</p>
+                    <p>Cybernetic enhancements were all the rage these days, especially since they were made available for public use. Initially, only military and commercial projects could license the procedures necessary to install cybernetic implants. But those days were long gone, and the concept of “the new human” was taking the galaxy by storm.</p>
+                    <p>Of course, with any movement, there was backlash.  What of the sanctity of the human body? What about taking pride in your biology? Such arguments were normally laughed off. “Get with the times,” people would say. But one man among many stood out, gaining public attention and starting a counter movement of anti-cybernetics.</p>
+                    <p>The man postulated that mankind was walking on a tight rope – when do the cybernetics end, and where does the human begin? Will mankind end up as a machine species, or will we use our new tech to only better ourselves - without losing sight of what makes us human? The words of this man echoed across the galaxy, leaving a trail of revolution in its wake.</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-two-character">
+            <div class="page-two-character-video">
+                <div>
+                    <img alt="Engineer" src="../assets/images/Characters/Engineer/Engineer.jpg" class="video-character">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="abilities" id="abilities">
+    <div class="abilities_header">
+        <h2>Abilities</h2>
+    </div>
+    <div class="abilities_heroAbilities">
+        <div class="abilities_left">
+            <!-- Видео способностей персонажа -->
+            <div class="abilities_video">
+                <video
+                        v-for="(video, index) in videos"
+                        :key="index"
+                        :id="'video-' + index"
+                        :src="video.src"
+                        class="abilities_video_play"
+                        muted
+                        loop
+                        :style="{ display: selectedIndex === index ? 'block' : 'none' }"
+                ></video>
+            </div>
+            <!-- Кнопки с картинкой -->
+            <div class="abilities_selector" >
+                <div class="one_ability">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index === 0" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===1 || index===2" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===3 || index===4" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===5 || index===6" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+            </div>
+        </div>
+        <!-- Описание способностей персонажа -->
+        <div class="abilities_right">
+            <div
+                    v-for="(ability, index) in abilities"
+                    :key="index"
+                    class="right-ability"
+                    :class="{
+            'display-selected': selectedIndex === index,
+            'display-non-selected': selectedIndex !== index
+          }"
+            >
+                <div class="ability-up">
+                    <img :src="`${ability.image}`" :alt="ability.name" />
+                    <div>
+                        <h3>{{ ability.name }}</h3>
+                        <p>{{ ability.description }}</p>
+                    </div>
+                </div>
+                <div class="ability-down">
+                    <p v-if="ability.cooldown">Cooldown: {{ ability.cooldown }}</p>
+                    <p v-if="ability.procCoefficient">Proc Coefficient: {{ ability.procCoefficient }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+<script src="../assets/js/character.js"></script>
+</body>
+</html>

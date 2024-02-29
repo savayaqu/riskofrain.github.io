@@ -1,0 +1,376 @@
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-family: BOMBARD, serif;
+    min-height: 72px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: black;
+    z-index: 10;
+}
+
+.navbar > nav > ul {
+    justify-content: flex-start;
+}
+
+.navbar > nav > ul > li:nth-child(1) {
+    padding-left: 25px;
+}
+.navbar > nav > ul > li {
+    display: inline-block;
+    padding-left: 25px;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-family: BOMBARD, serif;
+}
+
+.navbar > nav > ul > li > a {
+    text-decoration: none;
+    font-family: BOMBARD, serif;
+    color: #91e3f3;
+    font-size: 32px;
+}
+
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(../images/main/rorr-background1.png);
+    background-position: center 10px;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    background-color: black;
+}
+
+.main > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    padding-top: 23.75vh;
+}
+
+.button-for {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 25px;
+}
+.button-for > a > button {
+    background: #506FAA;
+    height: 70px;
+    width: 288px;
+    border: none;
+    border-radius: 5px ;
+    font-size: 30px;
+    line-height: 70px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-family: BOMBARD, serif;
+    text-align: center;
+}
+.navbar > nav > ul > li > a:hover {
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+    color: white;
+}
+.navbar > nav > ul > li > a {
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+.container {
+    min-height: 100vh;
+}
+.video-bg {
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+}
+.video__media {
+    height: 100vh;
+    position: absolute;
+    left: -350px;
+    z-index: 0;
+}
+
+.video-bg > div:nth-child(2) {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 29vh;
+    left: 50px;
+}
+.video-bg > div:nth-child(4) {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 29vh;
+}
+.video-bg > p {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 29vh;
+    padding-top: 160px;
+    font-size: 45px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-family: BOMBARD, serif;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+}
+.video-bg > .button-for > a > button {
+    background: #8D6DC4;
+    height: 74px;
+    width: 215px;
+}
+.video-bg > .button-for > a > button:hover
+{
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+    background-color: #7c57bb;
+}
+
+.buy-game {
+    min-height: 85vh;
+    background-image: url(../images/buygame/ror2_key_6501.png);
+    background-position: 60px center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-color: #f4f4f4;
+}
+
+.buy-game > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.buy-game > div:nth-child(1) > img {
+    padding-top: 335px;
+}
+.buy-game > .button-for {
+    padding: 10px;
+}
+
+.buy-game > .button-for > a > button {
+    background-color: #5AA1E3;
+    height: 70px;
+    width: 200px;
+}
+.buy-game > .button-for > a > button:hover {
+    background-color: #4092df;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+.buy-game > p {
+    padding-top: 40px;
+    font-size: 45px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-family: BOMBARD, serif;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+}
+
+.about {
+    min-height: 110vh;
+    background-image: url(../images/about/ror_bg1a.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 20px;
+}
+.about > div:nth-child(1) > h1 {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    font-size: 45px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-family: BOMBARD, serif;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 3px 3px 3px black;
+}
+.about > div:nth-child(2) > div > h3 {
+    text-transform: uppercase;
+}
+.about > div > p {
+    padding-top: 40px;
+    font-size: 24px;
+    color: #ffff;
+    font-family: OpenSans, serif;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+
+.about > div:nth-child(2) > div > h3 {
+    padding-top: 65px;
+    font-size: 35px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-family: BOMBARD, serif;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 3px 3px 3px black;
+}
+
+.about > div > div > p {
+    padding-top: 45px;
+    font-size: 22px;
+    color: #ffff;
+    font-family: OpenSans, serif;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+
+.about > div:nth-child(2) > div {
+    width: 50%;
+}
+.about > div:nth-child(2) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.features {
+    min-height: 100vh;
+    background-image: url(../images/features/square_bg1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.features > h1 {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-family: BOMBARD, serif;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 3px 3px 3px black;
+}
+
+.features > div {
+    margin: 0 auto;
+    padding-left: 90px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.features > div > div > a > img {
+    height: 225px;
+    width: 400px;
+    border: 3px solid #ffff;
+}
+.features > div > div > p {
+    padding-top: 30px;
+    font-size: 27px;
+    color: #ffff;
+    font-family: OpenSans, serif;
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
+    line-height: 1.2em;
+    width: 400px;
+    white-space: normal;
+    padding-bottom: 30px;
+}
+.media {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 75vh;
+    background-image: url(../images/media/ror_bg1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.media > h2 {
+    padding-bottom: 20px;
+    font-size: 40px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-family: BOMBARD, serif;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 3px 3px 3px black;
+}
+footer {
+    height: 155px;
+    background-color: #000;
+    padding: 10px 32px 0 32px;
+    font-family: OpenSans, serif;
+}
+
+footer > div:nth-child(1) > ul {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 10px;
+    padding-top: 15px;
+}
+
+footer > div:nth-child(1) > ul > li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+footer > div:nth-child(1) > ul > li > a {
+    text-decoration: none;
+    font-family: Oswald-Regular, serif;
+    color: #91e3f3;
+    font-size: 16px;
+}
+footer > div:nth-child(1) > ul > li > a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+}
+footer > div:nth-child(1) > div > div {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding-top: 10px;
+}
+footer > div:nth-child(1) > div {
+    display: flex;
+    justify-content: space-between;
+}
+footer > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+footer > div:nth-child(2) > span {
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}

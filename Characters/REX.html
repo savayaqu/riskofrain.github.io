@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REX</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/character-style.css">
+    <link rel="stylesheet" href="../assets/css/engine.css">
+</head>
+<body>
+<!-- Блок с навигацией -->
+<div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="https://gearboxsoftware.zendesk.com/hc/en-us/categories/360001615171-Risk-of-Rain-2">Support</a></li>
+            <li><a href="../Characters.html">Characters</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- Дополнительная информация о персонаже -->
+<section class="information_character">
+    <div class="center-block">
+        <div class="page-one-character">
+            <div class="preview-character">
+                <img src="../assets/images/Characters/REX/REX.webp" alt="REX">
+                <div>
+                    <h2 style="text-shadow: 1px 1px 2px black;">REX</h2>
+                    <p style="color: #898989; text-shadow: 1px 1px 2px black;">Survivor</p>
+                </div>
+            </div>
+
+            <div class="character-stats">
+                <div>
+                    <div class="tableaa">
+                        <div>
+                            <p>Health</p>
+                            <p>130 (+39 per level) </p>
+                        </div>
+                        <div>
+                            <div>Health Regen</div>
+                            <div>
+                                <div>
+                                    <img src="../assets/images/Pain/Drizzle.png" alt="Drizzle">
+                                    <span style="color: #9CE562;">1.5/s (+0.2 per level)</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/Pain/Rainstorm.png" alt="Rainstorm">
+                                    <span style="color: #E5C962;">1/s (+0.2 per level)</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/Pain/Monsoon.png" alt="Monsoon">
+                                    <span style="color: #E58262;">0.6/s (+0.2 per level)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Damage</p>
+                            <p>12 (+2.4 per level) </p>
+                        </div>
+                        <div>
+                            <p>Speed</p>
+                            <p>7 m/s</p>
+                        </div>
+                        <div>
+                            <p>Armor</p>
+                            <p>20 (<img src="../assets/images/Pain/Drizzle.png" alt="Drizzle"> <span style="color: #9CE562;">90</span>)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-lore">
+                    <h3 style="text-align: start;">Lore:</h3>
+                    <p style="color: #7d8d9b; text-transform: uppercase; font-size: 20px; font-weight: bold">//--AUTO-TRANSCRIPTION FROM HYDROPONICS BAY OF UES [Redacted]--//</p>
+                    <p>“Status Report on Hydroponics Unit. Serial key begins with 12ea031lsd095a-“</p>
+                    <p>“Yes, 12ea03. Tasked with care for the cabbage, lettuce, and mizuna growths. About 250 plants total. Stable, but losing biomass. I think there are issues with the microgravity. ”</p>
+                    <p>“Keep an eye on the biomass, we might have to scrap 12ea03 and replace it with one of our evergreen Units. Moving on… serial key crp012d054jd0-“</p>
+                    <p>“Crp01 is doing alright. Tasked with corn. About 80 plants total. Lost 6, down to 74.” </p>
+                    <p>“Sustainable, I suppose. What about… serial key rex0ch12d66m-“</p>
+                    <p>“Oh, that Unit. Yeah, it was tasked with care for one of our cabbage hybrids. To be quite frank… it turned out terrible. I think we started with 80 units, but we’ve lost 79. The hybrid species just isn’t spliced right, I think. There was no way to sustain them.”</p>
+                    <p>“And status report on the Unit?”</p>
+                    <p>“Uh, well… it’s out on the star deck. It managed to hoist the last hybrid onto its platform base, and it’s been walking around the ship ever since, chasing down starlight. ”</p>
+                    <p>“…What? The Unit left Hydroponics? </p>
+                    <p>“Yes, but-“</p>
+                    <p>“So the Unit is disengaging from protocol?”</p>
+                    <p>“Well, yes, but-“</p>
+                    <p>“And instead of terminating the Unit, you let it roam around the ship unsupervised?”</p>
+                    <p>“Just the team, well we just- we just kinda feel bad for the thing, you know. It’s trying really hard to keep that last hybrid alive, and-“</p>
+                    <p>“Go terminate the Unit.”</p>
+                    <p>“Well, the thing is- Rex is actually doing a great job! The hybrid’s biomass-“</p>
+                    <p>“Are you kidding? Terminate the Unit. You have no idea what happens to a robot once it disengages from protocol. You are putting the life of your entire team in danger for the sake of a stray hydroponics unit. This should not even be a discussion.”</p>
+                    <p>….</p>
+                    <p>“Yes, sir.”</p>
+                    <p style="color: #7d8d9b; font-size: 20px; font-weight: bold">Transcriptions complete.</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-two-character">
+            <div class="page-two-character-video">
+                <div>
+                    <img alt="Huntress" src="../assets/images/Characters/REX/Rex.jpg" class="video-character">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="abilities" id="abilities">
+    <div class="abilities_header">
+        <h2>Abilities</h2>
+    </div>
+    <div class="abilities_heroAbilities">
+        <div class="abilities_left">
+            <div class="abilities_video">
+                <video
+                        v-for="(video, index) in videos"
+                        :key="index"
+                        :id="'video-' + index"
+                        :src="video.src"
+                        class="abilities_video_play"
+                        muted
+                        loop
+                        :style="{ display: selectedIndex === index ? 'block' : 'none' }"
+                ></video>
+            </div>
+            <div class="abilities_selector" >
+                <div class="one_ability" >
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index === 0" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="one_ability" >
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index === 1" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===2 || index===3" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===4 || index===5" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===6 || index===7" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+            </div>
+        </div>
+        <!-- Описание способностей персонажа -->
+        <div class="abilities_right">
+            <div
+                    v-for="(ability, index) in abilities"
+                    :key="index"
+                    class="right-ability"
+                    :class="{
+            'display-selected': selectedIndex === index,
+            'display-non-selected': selectedIndex !== index
+          }"
+            >
+                <div class="ability-up">
+                    <img :src="`${ability.image}`" :alt="ability.name" />
+                    <div>
+                        <h3>{{ ability.name }}</h3>
+                        <p>{{ ability.description }}</p>
+                    </div>
+                </div>
+                <div class="ability-down">
+                    <p v-if="ability.cooldown">Cooldown: {{ ability.cooldown }}</p>
+                    <p v-if="ability.procCoefficient">Proc Coefficient: {{ ability.procCoefficient }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+<script src="../assets/js/character.js"></script>
+</body>
+</html>

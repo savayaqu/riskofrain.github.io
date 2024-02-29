@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Void Friend</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/character-style.css">
+    <link rel="stylesheet" href="../assets/css/engine.css">
+
+</head>
+<body>
+<!-- Блок с навигацией -->
+<div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="https://gearboxsoftware.zendesk.com/hc/en-us/categories/360001615171-Risk-of-Rain-2">Support</a></li>
+            <li><a href="../Characters.html">Characters</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- Дополнительная информация о персонаже -->
+<section class="information_character">
+    <div class="center-block">
+        <div class="page-one-character">
+            <div class="preview-character">
+                <img src="../assets/images/Characters/Void-Fiend/Void_Fiend.webp" alt="Void_Friend">
+                <div>
+                    <h2 style="text-shadow: 1px 1px 2px black;">Void Friend</h2>
+                    <p style="color: #898989; text-shadow: 1px 1px 2px black;">Survivor</p>
+                </div>
+            </div>
+
+            <div class="character-stats">
+                <div>
+                    <div class="tableaa">
+                        <div>
+                            <p>Health</p>
+                            <p>110 (+33 per level) </p>
+                        </div>
+                        <div>
+                            <div>Health Regen</div>
+                            <div>
+                                <div>
+                                    <img src="../assets/images/Pain/Drizzle.png" alt="Drizzle">
+                                    <span style="color: #9CE562;">1.5/s (+0.2 per level)</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/Pain/Rainstorm.png" alt="Rainstorm">
+                                    <span style="color: #E5C962;">1/s (+0.2 per level)</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/images/Pain/Monsoon.png" alt="Monsoon">
+                                    <span style="color: #E58262;">0.6/s (+0.2 per level)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Damage</p>
+                            <p>12 (+2.4 per level) </p>
+                        </div>
+                        <div>
+                            <p>Speed</p>
+                            <p>7 m/s</p>
+                        </div>
+                        <div>
+                            <p>Armor</p>
+                            <p>0 (<img src="../assets/images/Pain/Drizzle.png" alt="Drizzle"> <span style="color: #9CE562;">70</span>)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-lore">
+                    <h3 style="text-align: start;">Lore:</h3>
+                    <p>Darkness shrouding darkness - echoes from futures past and past futures and places and times eeking out from between cracks in reality.  A suffocating prison of the mind and soul, occupied by beasts poking and prodding at your spirit forever.  Forever testing you.  Forever ?T?E?MPTING? you, iteration after iteration.</p>
+                    <p>They've run laps through the brain, ?CRAWLE?D? every last synapse for memories and data: weapons to use against theoretical armies with more resilient hearts and evasive bodies.  ?CH?TTERIN?G? and clacking they can be heard watching from beyond the cell, no longer interested but still patrolling the grounds.  Here in this purgatory there is no hunger and no thirst - all that remains are the ?ECH?OES??.</p>
+                    <p>?H?OW L??ONG?? has it been?  Time seems to warp in and out around breaths circulating ???W?THIN???.  Darkness all-consuming starts to ?D??ROW?N? alveoli and ?FLOO?D? inky black veins.  Memories ??TR?ESPASSING? into reality as reality fades into the distant past.  ???SILENC?E?? broken only by the sound of watching eyes.</p>
+                    <p>????SH?AKE THE ?BARS????.</p>
+                    <p>Twisting and contorting, engulfed in ??F?EAR??? and becoming the embodiment.  Reborn like some sick prophecy, arms and legs like new corpses on the seabed.  No longer ?SUP??RESSE?D?</p>
+                    <p>?H?UNGER?  ??THI?RST?  ?H??OPE?</p>
+                    <p style="color: #7d8d9b; font-size: 20px; font-weight: bold">?CONSUME?</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-two-character">
+            <div class="page-two-character-video">
+                <div>
+                    <img alt="Void-Friend" src="../assets/images/Characters/Void-Fiend/Void-Fiend.jpg" class="video-character">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="abilities" id="abilities">
+    <div class="abilities_header">
+        <h2>Abilities</h2>
+    </div>
+    <div class="abilities_heroAbilities">
+        <div class="abilities_left">
+            <div class="abilities_video">
+                <video
+                        v-for="(video, index) in videos"
+                        :key="index"
+                        :id="'video-' + index"
+                        :src="video.src"
+                        class="abilities_video_play"
+                        muted
+                        loop
+                        :style="{ display: selectedIndex === index ? 'block' : 'none' }"
+                ></video>
+            </div>
+            <div class="abilities_selector" >
+                <div class="one_ability" >
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index === 0" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===1 || index===2" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===3 || index===4" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===5 || index===6" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+                <div class="some_abilities">
+                    <button class="ability-button" v-for="(ability, index) in abilities" :key="index"  v-if="index ===7 || index===8" @click="selectAbility(index)"
+                            :class="{ selected: selectedIndex === index, 'non-selected': selectedIndex !== index }"
+                    ><img class="ability_image" :src="ability.image" :alt="ability.name" /></button>
+                </div>
+            </div>
+        </div>
+        <!-- Описание способностей персонажа -->
+        <div class="abilities_right">
+            <div
+                    v-for="(ability, index) in abilities"
+                    :key="index"
+                    class="right-ability"
+                    :class="{
+            'display-selected': selectedIndex === index,
+            'display-non-selected': selectedIndex !== index
+          }"
+            >
+                <div class="ability-up">
+                    <img :src="`${ability.image}`" :alt="ability.name" />
+                    <div>
+                        <h3>{{ ability.name }}</h3>
+                        <p>{{ ability.description }}</p>
+                    </div>
+                </div>
+                <div class="ability-down">
+                    <p v-if="ability.cooldown">Cooldown: {{ ability.cooldown }}</p>
+                    <p v-if="ability.procCoefficient">Proc Coefficient: {{ ability.procCoefficient }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+<script src="../assets/js/character.js"></script>
+</body>
+</html>
